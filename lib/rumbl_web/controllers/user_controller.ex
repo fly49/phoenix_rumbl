@@ -34,8 +34,4 @@ defmodule RumblWeb.UserController do
     render(conn, "show.html", user: user)
   end
 
-  def action(conn, _options) do
-    args = [conn, conn.params, conn.assigns.current_user]
-    apply(__MODULE__, action_name(conn), args)
-  end
 end
