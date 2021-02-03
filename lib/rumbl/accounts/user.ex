@@ -15,7 +15,7 @@ defmodule Rumbl.Accounts.User do
     user
     |> cast(attrs, [:name, :username])
     |> validate_required([:name, :username])
-    |> validate_length(:username, min: 6, max: 20)
+    |> validate_length(:username, min: 3, max: 20)
     |> unique_constraint(:username)
   end
 
